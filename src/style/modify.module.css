@@ -1,0 +1,136 @@
+.container_modify{
+    width: 100%;
+}
+.breadcrumb{
+    background-color: lightgrey;
+    font-size: 25px;
+    font-weight: bold;
+}
+.breadcrumb p{
+    margin-left: 5%;
+    padding: 1.5%;  
+}
+.breadcrumb button{
+    margin-left: 85%;
+    padding: 1.5%;
+    font-weight: bold;
+  
+      
+}
+.back{
+    background-color: rgb(49,54,57);
+    color: white;
+    font-size: 15px;
+    padding: 1%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+.selectionpart{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border: 2px solid black;
+}
+.head3:hover
+{
+color: red;
+}
+.cross{
+    background: none;
+    border: none;
+    font-size:x-large;
+    cursor: pointer;
+}
+.modal{
+    margin-top: -68%;
+    /* margin-bottom: 20%; */
+    margin-left: 17%;
+    position: fixed;
+    width: 60%;
+    height: 30%;
+    background: lightgrey;
+    border-radius: 15px;
+    padding: 2%;
+}
+.head4:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.leftselect{
+    width: 100%;
+    text-align: center;
+   
+    border-right: 1px solid grey;
+}
+.childleftselect{
+    width: 100%;
+    
+    /* Add this */
+    position: static;
+    top:0;
+    left:0;
+}
+.childleftselect img{
+    height: 30em;
+    width: 15.1em;
+    object-fit: cover;
+    
+}
+.leftrange input{
+  width: 75%; 
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;  
+}
+.childleftselect button:hover{
+    
+}
+.childleftselectbody{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.childleftselectbody button{}
+    
+.setuprange{
+    margin-left: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.childleftselectbody button:hover{}
+   
+.rightmain
+{
+    width: 40%;
+    text-align: center;
+    overflow: auto;
+}
+.rightmain .heading
+{
+    text-align: left;
+    padding-left: 3%;
+    
+}
+.rightmain .heading:hover
+{
+    color: red ;
+    cursor: pointer;
+}
+.rightmain .wheelshead:hover
+{
+ color: red;  
+ cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .breadcrumb p{
+        margin-top: 10%;
+        margin-left: 5%;
+        padding: 1.5%;  
+    }
+  }

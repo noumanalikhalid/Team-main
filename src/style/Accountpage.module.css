@@ -1,0 +1,100 @@
+.signupbox {
+    width: 360px;
+    height: 720px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px; 
+  }
+  .signupbtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .loginbtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .loginbox {
+    width: 360px;
+    height: 280px;
+    margin-left: 35%;
+    border-radius: 3px;
+    background-color: white;
+  }
+  
+  .accounttitle {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .btn3:hover
+  {
+    color: black;
+  }
+  
+  .Accpage h4 {
+    font-weight: lighter;
+    text-align: center;
+  }
+  
+  .accountform {
+    width: 300px;
+    margin-left: 10%;
+  }
+  
+  .accountform label {
+    display: flex;
+    
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .btn:hover
+  {
+color: black;
+  }
+  .btn2
+  {
+    margin-left: 10%;
+    border-radius: 5%;
+  }
+  
+  .btn2:hover
+  {
+color: black;
+  }
+  
+  .accountform input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="button"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+  }
+  .Accpage p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .para_2 {
+    text-align: center;
+  
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .para_2 a {
+    color: #49c1a2;
+  }
+  
+  

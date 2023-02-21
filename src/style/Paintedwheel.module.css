@@ -1,0 +1,20 @@
+.PaintedWheel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.paintwheelclass img{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.paintwheelclass img
+{
+    width: 45px;
+    height: 45px;
+    border-radius:50% ;
+}
+.paintwheelclass p{
+    margin-left: 2%;
+   
+}

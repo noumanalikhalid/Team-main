@@ -1,0 +1,117 @@
+
+.breadcrumb{
+    background-color: lightgrey;
+    font-size: 25px;
+    font-weight: bold;
+}
+.breadcrumb p{
+    margin-left: 5%;
+    padding: 1.5%;  
+}
+.back{
+    background-color: rgb(49,54,57);
+    color: white;
+    font-size: 15px;
+    padding: 1%;
+    margin-left: 6%;
+    margin-bottom: 2%;
+}
+.breadcrumb button{
+    background-color: rgb(49,54,57);
+    color: white;
+    font-size: 15px;
+    padding: 1%;
+    margin-left: 30%;
+    margin-bottom: 1.5%;
+}
+.selectionpart{
+    width: 88%;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+.leftselect{
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid grey;
+}
+.childleftselect{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.childleftselect button{
+    width: 65%;
+    margin: auto;
+    font-size: 15px;
+    padding: 3%;
+    background: rgb(49,54,57);
+    border: none;
+    margin-top:2% ;
+    color: white;
+}
+.leftrange input{
+  width: 75%; 
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;  
+}
+.childleftselect button:hover{
+    background: red;
+    color: white;
+}
+.childleftselectbody{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+.childleftselectbody button{
+    width: 65%;
+    margin: auto;
+    font-size: 15px;
+    padding: 3%;
+    background-color: white;
+    border: 1px solid rgb(49,54,57);
+    margin-top:2% ;
+    color: black;
+}
+.setuprange{
+    margin-left: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.childleftselectbody button:hover{
+    border: 1px solid red;
+    color: red;
+}
+.rightmain
+{
+    width: 80%;
+    text-align: center;
+}
+.rightmain .heading
+{
+    text-align: left;
+    padding-left: 3%;
+    
+}
+.rightmain .heading:hover
+{
+    color: red ;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .breadcrumb p{
+        margin-top: 10%;
+        margin-left: 5%;
+        padding: 1.5%;  
+    }
+  }
