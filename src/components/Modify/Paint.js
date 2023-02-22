@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../../style/Paint.module.css";
 
-const Paint=(props)=>
+const Paint=()=>
 {
     const data = [
         {
@@ -21,12 +21,15 @@ const Paint=(props)=>
         <>
         {/* Working */}
         <div className={style.mainpaint}>
+        <h4>200/Rs</h4>
             {data.map((datas)=>(
                 <div className={style.paintclass}>
                     <img src={datas.color}/>
                     <p className={style.paintname} >{datas.Name}</p>
+                    
                 </div>
                 ))}
+          <button>Add</button>   
         </div>
         </>
     )

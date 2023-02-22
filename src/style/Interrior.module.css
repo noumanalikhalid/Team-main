@@ -1,11 +1,10 @@
-.mainwheel{
+.Interriormain{
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 10px;;
     margin-left: 10px;
 }
-.mainwheel button
+.Interriormain button
 {
   margin-right: 10%;
  
@@ -15,18 +14,18 @@
     background-color: rgb(49,54,57);
     color: white;
 }
-.wheelclass img{
+.interriorclass img{
     display: flex;
     flex-direction: row;
     margin: auto;
 }
-.wheelclass img
+.interriorclass img
 {
     width: 45px;
     height: 45px;
     border-radius:50% ;
 }
-.wheelclass p{
+.interriorclass p{
     margin-left: 2%;
    
 }

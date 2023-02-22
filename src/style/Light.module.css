@@ -1,0 +1,23 @@
+.Lightt   {
+    display: inline flex;
+   
+     margin-right: 10px;
+     font-size: 16px;
+     font-weight: bold;
+   }
+.Lightt button
+{
+  margin-left: 75%;
+    height: 15%;
+    width: 18%;
+   
+    background-color: rgb(49,54,57);
+    color: white;
+}
+   
+   
+  .Lightt input[type=checkbox] {
+     margin-right: 5px;
+     transform: scale(2.5);
+     margin-left: 5px;
+   }

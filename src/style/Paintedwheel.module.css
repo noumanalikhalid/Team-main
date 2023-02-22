@@ -2,6 +2,17 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
+}
+.PaintedWheel button
+{
+  margin-right: 10%;
+ 
+    height: 15%;
+    width: 20%;
+    margin-top: 150px;
+    background-color: rgb(49,54,57);
+    color: white;
 }
 .paintwheelclass img{
     display: flex;

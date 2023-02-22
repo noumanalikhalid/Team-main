@@ -25,6 +25,14 @@
     margin-left: 2%;
     margin-bottom: 2%;
 }
+.sav{
+    background-color: rgb(49,54,57);
+    color: white;
+    font-size: 15px;
+    padding: 1%;
+    margin-left: 75%;
+    margin-bottom: 2%;
+}
 .selectionpart{
     width: 100%;
     margin: auto;
@@ -36,6 +44,7 @@
 .head3:hover
 {
 color: red;
+cursor: pointer;
 }
 .cross{
     background: none;
@@ -124,6 +133,33 @@ color: red;
  color: red;  
  cursor: pointer;
 }
+.rightmain .paintwheel:hover
+{
+ color: red;  
+ cursor: pointer;
+}
+
+.rightmain .interriorhead:hover
+{
+ color: red;  
+ cursor: pointer;
+}
+.rightmain .Bumpershead:hover
+{
+ color: red;  
+ cursor: pointer;
+}
+.rightmain .Lighthead:hover
+{
+ color: red;  
+ cursor: pointer;
+}
+.rightmain.paintheading:hover
+{
+    color:red;
+    cursor: pointer;
+}
+
 
 
 

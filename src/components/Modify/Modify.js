@@ -7,7 +7,10 @@ import style from "../../style/modify.module.css";
 import Paint from "./Paint";
 import { Wheel } from "./Wheel";
 import { PaintedWheel } from "./PaintedWheel";
-
+import { Interrior } from "./Interrior";
+import { Bumpers } from "./Bumpers";
+import { Lights } from "./Lights";
+import { Carsole2 } from "./Carsole2";
 
 
 
@@ -113,39 +116,22 @@ export const Modify = () => {
       <div className={style.container_modify}>
         <div className={style.breadcrumb}>
           <p>Porsche</p>
-          <button>
-            <SaveFill/>
-             Save
-            </button>
+         
         </div>
         <button className={style.back}>
           <ChevronLeft />
           Back
+        </button>
+        <button className={style.sav}>
+          <SaveFill />
+          Save
         </button>
         <div className={style.selectionpart}>
           <div className={style.leftselect}>
             {/* Models */}
             <h2>MODELS</h2>
             <div id="fixed" className={style.mainleft} >
-              <Carousel
-                transitionTime={"1"}
-                showThumbs={false}
-                className={style.childleftselect}
-                // style={{backgroud}}
-              >
-                <div>
-                  <img src="https://di-uploads-pod15.dealerinspire.com/porscheofhuntsville/uploads/2020/05/2017-Macan-GTS-Red-small.jpg" />
-                </div>
-                <div>
-                  <img src="https://di-uploads-pod15.dealerinspire.com/porschestpaul/uploads/2019/03/911_CarreraS_Hero_Image-1024x320.jpg" />
-                </div>
-                <div>
-                  <img src="https://di-uploads-pod15.dealerinspire.com/porscheminneapolis/uploads/2022/05/porsche-normal.jpg" />
-                </div>
-                <div>
-                  <img src="https://files.porsche.com/filestore/image/multimedia/none/countryselector-panamera-platinum-edition/normal/f2415bd6-3e3a-11ec-80e2-005056bbdc38;s45/porsche-normal.jpg" />
-                </div>
-             </Carousel>
+            
              <h1>nomi</h1>
              
              
@@ -161,6 +147,7 @@ export const Modify = () => {
               <ChevronRight />
               Details
             </h1>
+            <hr></hr>
             {Data.map((datas) => (
               <Details
                 Price={datas.Price}
@@ -168,14 +155,29 @@ export const Modify = () => {
                 Maxpower={datas.Maxpower}
               />
             ))}
+            <hr></hr>
             <h1 className={style.head3}>Extra Details</h1>
             <a className={style.head4} onClick={worked}>See Details</a>
-            <h1 className={style.painthead}>Exterior Paint</h1>
+            <hr></hr>
+            <h1 className={style.paintheading}>Exterior Paint</h1>
               <Paint/>
+              <hr></hr>
               <h1 className={style.wheelshead}>Wheels</h1>
               <Wheel/>
+              <hr></hr>
               <h1 className={style.paintwheel}>Painted Wheel</h1>
               <PaintedWheel/>
+              <hr></hr>
+              <h1 className={style.interriorhead}> Interior Colors</h1>
+              <Interrior/>
+              <hr></hr>
+              <h1 className={style.Bumpershead}>Exterior Bumpers</h1>
+            <Bumpers/>
+            <hr></hr>
+            <h1 className={style.Lighthead}>Lights/Vision</h1>
+            <Lights/>
+            <hr></hr>
+            
 
              
              

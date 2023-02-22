@@ -6,6 +6,20 @@
    
    
 }
+.mainpaint h4{
+    margin-top: 100px;
+    margin-left: -50px;
+    padding-right: 5%;
+}
+.mainpaint button
+{
+    height: 15%;
+    width: 15%;
+    margin-top: 100px;
+    background-color: rgb(49,54,57);
+    color: white;
+}
+
 .paintclass img{
     display: flex;
     flex-direction: row;
