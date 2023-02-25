@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 import { ChevronLeft, ChevronRight, X ,SaveFill} from "react-bootstrap-icons";
 import { Carousel } from "react-responsive-carousel";
+=======
+import { ChevronLeft, ChevronRight, X, SaveFill } from "react-bootstrap-icons";
+>>>>>>> 84d5e1c (main)
 import Details from "./Detail";
 import Exdetail from "./Exdetail";
 import style from "../../style/modify.module.css";
@@ -10,6 +14,7 @@ import { PaintedWheel } from "./PaintedWheel";
 import { Interrior } from "./Interrior";
 import { Bumpers } from "./Bumpers";
 import { Lights } from "./Lights";
+<<<<<<< HEAD
 import { Carsole2 } from "./Carsole2";
 
 
@@ -37,19 +42,59 @@ export const Modify = () => {
   const Data = [
     {
       Name:"718 Cayman",
+=======
+import { ModelCarsouel } from "./ModelCarsouel";
+import { useState } from "react";
+
+
+export const Modify = () => {
+  const [lefted,  lefteds] = useState("0%")
+  const [mar , margs] = useState("0%");
+  const [changes , changepropertys] = useState("static");
+  const changeproperty=() => {
+      if(window.scrollY >= 300){
+          changepropertys ("fixed")
+          margs("25%")
+          lefteds("75%")
+        }
+  }
+  window.addEventListener('scroll' , changeproperty);
+  const Closes = () => {
+    var x = document.getElementById("dis");
+    x.style.visibility = "hidden";
+    console.log("Working");
+  };
+  const worked = () => {
+    var x = document.getElementById("dis");
+    x.style.visibility = "visible";
+    console.log("Working");
+  };
+
+  const Data = [
+    {
+      Name: "718 Cayman",
+>>>>>>> 84d5e1c (main)
       Price: " 1.32 Crore",
       Mileage: "14.5 kmpl",
       Maxpower: "2150 rpm",
     },
+<<<<<<< HEAD
     
   ];
   const Data2=[
     {
       Name:"718 Cayman",
+=======
+  ];
+  const Data2 = [
+    {
+      Name: "718 Cayman",
+>>>>>>> 84d5e1c (main)
       Price: " 1.32 Crore",
       Mileage: "14.5 kmpl",
       Maxpower: "@ 2150 rpm",
     },
+<<<<<<< HEAD
     /*{
       Name:"Porsche 911 Carrera",
       Price: "  1.63 Crore",
@@ -111,12 +156,31 @@ export const Modify = () => {
     }*/
     
   ]
+=======
+  ];
+  const PaintData = [
+    {
+      imgsrc:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/768px-Black_colour.jpg",
+      Name: "Black",
+      Price: "2000",
+    },
+    {
+      imgsrc: "https://color.adobe.com/media/theme/92471.png",
+      Name: "White",
+      Price: "2000",
+    },
+  ];
+>>>>>>> 84d5e1c (main)
   return (
     <>
       <div className={style.container_modify}>
         <div className={style.breadcrumb}>
           <p>Porsche</p>
+<<<<<<< HEAD
          
+=======
+>>>>>>> 84d5e1c (main)
         </div>
         <button className={style.back}>
           <ChevronLeft />
@@ -127,6 +191,7 @@ export const Modify = () => {
           Save
         </button>
         <div className={style.selectionpart}>
+<<<<<<< HEAD
           <div className={style.leftselect}>
             {/* Models */}
             <h2>MODELS</h2>
@@ -142,6 +207,15 @@ export const Modify = () => {
             
           </div>
           <div className={style.rightmain}>
+=======
+          <div className={style.leftselect} style={{position:changes}}>
+            <h2>MODELS</h2>
+            <div className={style.mainleft}>
+              <ModelCarsouel/>
+            </div>
+          </div>
+          <div className={style.rightmain} style={{left:lefted}}>
+>>>>>>> 84d5e1c (main)
             <h1 className={style.heading}>
               {" "}
               <ChevronRight />
@@ -157,6 +231,7 @@ export const Modify = () => {
             ))}
             <hr></hr>
             <h1 className={style.head3}>Extra Details</h1>
+<<<<<<< HEAD
             <a className={style.head4} onClick={worked}>See Details</a>
             <hr></hr>
             <h1 className={style.paintheading}>Exterior Paint</h1>
@@ -205,6 +280,50 @@ export const Modify = () => {
      
       
        
+=======
+            <a className={style.head4} onClick={worked}>
+              See Details
+            </a>
+            <hr></hr>
+            <h1 className={style.paintheading}>Exterior Paint</h1>
+            <Paint />
+            <hr></hr>
+            <h1 className={style.wheelshead}>Wheels</h1>
+            <Wheel />
+            <hr></hr>
+            <h1 className={style.paintwheel}>Painted Wheel</h1>
+            <PaintedWheel />
+            <hr></hr>
+            <h1 className={style.interriorhead}> Interior Colors</h1>
+            <Interrior />
+            <hr></hr>
+            <h1 className={style.Bumpershead}>Exterior Bumpers</h1>
+            <Bumpers />
+            <hr></hr>
+            <h1 className={style.Lighthead}>Lights/Vision</h1>
+            <Lights />
+            <hr></hr>
+          </div>
+        </div>
+      </div>
+      <div className={style.modal} style={{ visibility: "hidden" }} id="dis">
+        <div>
+          <button className={style.cross} onClick={Closes}>
+            <X />
+          </button>
+          <div>
+            {Data2.map((dataes) => (
+              <Exdetail
+                Name={dataes.Name}
+                Price={dataes.Price}
+                Mileage={dataes.Mileage}
+                Maxpower={dataes.Maxpower}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+>>>>>>> 84d5e1c (main)
     </>
   );
 };

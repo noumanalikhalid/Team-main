@@ -1,5 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Carousel } from 'react-responsive-carousel'
+=======
+>>>>>>> 84d5e1c (main)
 import style from '../../style/Shop.module.css'
 import { Swiper, SwiperSlide } from "swiper/react";
 

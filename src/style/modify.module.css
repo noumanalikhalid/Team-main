@@ -14,8 +14,11 @@
     margin-left: 85%;
     padding: 1.5%;
     font-weight: bold;
+<<<<<<< HEAD
   
       
+=======
+>>>>>>> 84d5e1c (main)
 }
 .back{
     background-color: rgb(49,54,57);
@@ -38,8 +41,11 @@
     margin: auto;
     display: flex;
     flex-direction: row;
+<<<<<<< HEAD
     position: relative;
     border: 2px solid black;
+=======
+>>>>>>> 84d5e1c (main)
 }
 .head3:hover
 {
@@ -68,19 +74,33 @@ cursor: pointer;
     cursor: pointer;
 }
 .leftselect{
+<<<<<<< HEAD
     width: 100%;
     text-align: center;
    
+=======
+    width: 75%;
+    text-align: center;
+>>>>>>> 84d5e1c (main)
     border-right: 1px solid grey;
 }
 .childleftselect{
     width: 100%;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 84d5e1c (main)
     /* Add this */
     position: static;
     top:0;
     left:0;
 }
+<<<<<<< HEAD
+=======
+.mainleft{
+    margin-top: -150px;
+}
+>>>>>>> 84d5e1c (main)
 .childleftselect img{
     height: 30em;
     width: 15.1em;
@@ -113,7 +133,12 @@ cursor: pointer;
    
 .rightmain
 {
+<<<<<<< HEAD
     width: 40%;
+=======
+    position: relative;
+    width: 25%;
+>>>>>>> 84d5e1c (main)
     text-align: center;
     overflow: auto;
 }
@@ -159,10 +184,13 @@ cursor: pointer;
     color:red;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 84d5e1c (main)
 @media only screen and (max-width: 600px) {
     .breadcrumb p{
         margin-top: 10%;
