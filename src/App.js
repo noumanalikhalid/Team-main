@@ -12,6 +12,7 @@ import { Signup } from './components/Accounts/Signup';
 import { Shop } from './components/Shop/Shop';
 import { CarPage } from './components/CarPage/CarPage';
 import { Order } from './components/Order/Order';
+import { EndPage } from './components/Order/EndPage';
 
 const  App = ()=> {
   return (
@@ -20,14 +21,15 @@ const  App = ()=> {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path='/Built' element={<Built/>}/>
-          <Route path='/Modify' element={<Modify/>}/>
-          <Route path='/Account'element={<Account/>}/>
-          <Route path='/Signup' element={<Signup/>}/>
-          <Route path='/Login'element={<Login/>}/>
-          <Route path='/Shop'element={<Shop/>}/>
+          <Route path="/Built" element={<Built/>}/>
+          <Route path="/Modify" element={<Modify/>}/>
+          <Route path="/Account"element={<Account/>}/>
+          <Route path="/Signup" element={<Signup/>}/>
+          <Route path="/Login"element={<Login/>}/>
+          <Route path="/Shop"element={<Shop/>}/>
           <Route path="/Car" element={<CarPage/>}/>
           <Route path="/Order" element={<Order/>}/>
+          <Route path="/Accepted" element={<EndPage/>}/>
         </Routes>
         <Discover/>
         <Footer/>

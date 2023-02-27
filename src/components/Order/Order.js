@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import style from "../../style/Order.module.css";
 import { OrderCarousel } from "./OrderCarousel";
 
 export const Order = () => {
+    const Navigate = useNavigate();
+    const Movetoend = ()=>{
+        Navigate("/Accepted")
+    }
   return (
     <>
       <div className={style.Ordermain}>
@@ -54,7 +59,7 @@ export const Order = () => {
                     </div>
                 </div>
             </div>
-            <button className={style.orderButton}>ORDER</button>
+            <button className={style.orderButton} onClick={Movetoend}>ORDER</button>
           </div>
         </form>
       </div>
