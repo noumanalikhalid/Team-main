@@ -1,5 +1,15 @@
 .container_modify{
-    width: 100%;
+    width : 100%;
+}
+.modifymain{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.modifyleft{
+    width : 75%;
+    text-align:center;
 }
 .breadcrumb{
     background-color: lightgrey;
@@ -7,194 +17,32 @@
     font-weight: bold;
 }
 .breadcrumb p{
-    margin-left: 5%;
-    padding: 1.5%;  
-}
-.breadcrumb button{
-    margin-left: 85%;
-    padding: 1.5%;
-    font-weight: bold;
-<<<<<<< HEAD
-  
-      
-=======
->>>>>>> 84d5e1c (main)
-}
-.back{
-    background-color: rgb(49,54,57);
-    color: white;
-    font-size: 15px;
+    margin-left: 2.5%;
     padding: 1%;
-    margin-left: 2%;
-    margin-bottom: 2%;
+}
+.buttonsdiv{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
 }
 .sav{
     background-color: rgb(49,54,57);
     color: white;
     font-size: 15px;
     padding: 1%;
-    margin-left: 75%;
     margin-bottom: 2%;
 }
-.selectionpart{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-<<<<<<< HEAD
-    position: relative;
-    border: 2px solid black;
-=======
->>>>>>> 84d5e1c (main)
+.back{
+    background-color: rgb(49,54,57);
+    color: white;
+    font-size: 15px;
+    padding: 1%;
+    margin-bottom: 2%;
 }
-.head3:hover
-{
-color: red;
-cursor: pointer;
-}
-.cross{
-    background: none;
-    border: none;
-    font-size:x-large;
-    cursor: pointer;
-}
-.modal{
-    margin-top: -68%;
-    /* margin-bottom: 20%; */
-    margin-left: 17%;
-    position: fixed;
-    width: 60%;
-    height: 30%;
-    background: lightgrey;
-    border-radius: 15px;
+.modifyright{
+    width: 25%;
+    border-left: 1px solid lightgray;
     padding: 2%;
 }
-.head4:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-.leftselect{
-<<<<<<< HEAD
-    width: 100%;
-    text-align: center;
-   
-=======
-    width: 75%;
-    text-align: center;
->>>>>>> 84d5e1c (main)
-    border-right: 1px solid grey;
-}
-.childleftselect{
-    width: 100%;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 84d5e1c (main)
-    /* Add this */
-    position: static;
-    top:0;
-    left:0;
-}
-<<<<<<< HEAD
-=======
-.mainleft{
-    margin-top: -150px;
-}
->>>>>>> 84d5e1c (main)
-.childleftselect img{
-    height: 30em;
-    width: 15.1em;
-    object-fit: cover;
-    
-}
-.leftrange input{
-  width: 75%; 
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;  
-}
-.childleftselect button:hover{
-    
-}
-.childleftselectbody{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3%;
-}
-.childleftselectbody button{}
-    
-.setuprange{
-    margin-left: 40%;
-    display: flex;
-    flex-direction: row;
-}
-.childleftselectbody button:hover{}
-   
-.rightmain
-{
-<<<<<<< HEAD
-    width: 40%;
-=======
-    position: relative;
-    width: 25%;
->>>>>>> 84d5e1c (main)
-    text-align: center;
-    overflow: auto;
-}
-.rightmain .heading
-{
-    text-align: left;
-    padding-left: 3%;
-    
-}
-.rightmain .heading:hover
-{
-    color: red ;
-    cursor: pointer;
-}
-.rightmain .wheelshead:hover
-{
- color: red;  
- cursor: pointer;
-}
-.rightmain .paintwheel:hover
-{
- color: red;  
- cursor: pointer;
-}
-
-.rightmain .interriorhead:hover
-{
- color: red;  
- cursor: pointer;
-}
-.rightmain .Bumpershead:hover
-{
- color: red;  
- cursor: pointer;
-}
-.rightmain .Lighthead:hover
-{
- color: red;  
- cursor: pointer;
-}
-.rightmain.paintheading:hover
-{
-    color:red;
-    cursor: pointer;
-}
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 84d5e1c (main)
-@media only screen and (max-width: 600px) {
-    .breadcrumb p{
-        margin-top: 10%;
-        margin-left: 5%;
-        padding: 1.5%;  
-    }
-  }

@@ -20,12 +20,9 @@
     "react-dom": "^18.2.0",
     "react-instagram-embed": "^3.0.0",
     "react-loading-skeleton": "^3.1.0",
-<<<<<<< HEAD
     "react-responsive": "^9.0.0-beta.10",
     "react-responsive-carousel": "^3.2.23",
-=======
     "react-responsive": "^9.0.2",
->>>>>>> 84d5e1c (main)
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-threesixty": "^2.0.8",
