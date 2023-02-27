@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, X, SaveFill } from "react-bootstrap-icons";
+import { ChevronLeft, ChevronRight, X, Save } from "react-bootstrap-icons";
 import style from "../../style/modify.module.css";
 
 import Details from "./Detail";
@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Wheel } from "./Wheel";
 import { Interrior } from "./Interrior";
 import { Light } from "./Light";
+import { useNavigate } from "react-router-dom";
 
 export const Modify = () => {
   const [lefted, lefteds] = useState("0%");
@@ -25,6 +26,10 @@ export const Modify = () => {
     }
   };
   window.addEventListener("scroll", changeproperty);
+  const Navigation = useNavigate();
+  const MovetoShop = ()=>{
+    Navigation("/Shop")
+  }
   const Closes = () => {
     var x = document.getElementById("dis");
     x.style.visibility = "hidden";
@@ -47,15 +52,14 @@ export const Modify = () => {
             <ChevronLeft />
             Back
           </button>
-          <button className={style.sav}>
-            <SaveFill />
+          <button className={style.sav} onClick={MovetoShop}>
+            <Save />
             Save
           </button>
         </div>
         {/* Left Side  */}
         <div className={style.modifymain}>
-          <div className={style.modifyleft}>
-            <h2>MODEL NAME</h2>
+          <div className={style.modifyleft} >
             <ModelCarsouel />
           </div>
           {/* Right Side */}
@@ -87,74 +91,6 @@ export const Modify = () => {
           </div>
         </div>
       </div>
-      {/* <div className={style.container_modify}>
-        <div className={style.breadcrumb}>
-          <p>Porsche</p>
-        </div>
-        <div className= {style.buttonsdiv}>
-          <button className={style.back}>
-            <ChevronLeft />
-            Back
-          </button>
-          <button className={style.sav}>
-            <SaveFill />
-            Save
-          </button>
-        </div>
-        <div className={style.selectionpart}>
-          <div className={style.leftselect} style={{position:changes}}>
-            <h2>MODELS</h2>
-            <div className={style.mainleft}>
-              <ModelCarsouel/>
-            </div>
-          </div>
-          <div className={style.rightmain} style={{left:lefted}}>
-            <h1 className={style.heading}>
-              {" "}
-              <ChevronRight />
-              Details
-            </h1>
-            <hr></hr>
-            {Data.map((datas) => (
-              <Details
-                Price={datas.Price}
-                Mileage={datas.Mileage}
-                Maxpower={datas.Maxpower}
-              />
-            ))}
-            <hr></hr>
-            <h1 className={style.paintheading}>Exterior Paint</h1>
-            <Paint />
-            <hr></hr>
-            <h1 className={style.wheelshead}>Wheels</h1>
-            <Wheel />
-            <hr></hr>
-            <h1 className={style.interriorhead}> Interior Colors</h1>
-            <Interrior />
-            <hr></hr>
-            <h1 className={style.Lighthead}>Lights/Vision</h1>
-            <Lights />
-            <hr></hr>
-          </div>
-        </div>
-      </div>
-      <div className={style.modal} style={{ visibility: "hidden" }} id="dis">
-        <div>
-          <button className={style.cross} onClick={Closes}>
-            <X />
-          </button>
-          <div>
-            {Data.map((dataes) => (
-              <Exdetail
-                Name={dataes.Name}
-                Price={dataes.Price}
-                Mileage={dataes.Mileage}
-                Maxpower={dataes.Maxpower}
-              />
-            ))}
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

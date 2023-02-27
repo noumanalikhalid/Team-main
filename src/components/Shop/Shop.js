@@ -8,12 +8,17 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper";
+import { useNavigate } from 'react-router-dom';
 
 export const Shop = ()=>{
+    const OrderNavigation = useNavigate();
+    const MovetoOrder = ()=>{
+        OrderNavigation("/Order")
+    }
     return<>
         <div className={style.shopmain}>
             <div className={style.shopimage}>
-                <Swiper navigation={true} modules={[Navigation]} className={style.mySwiper}>
+                <Swiper navigation={true} modules={[Navigation]} className={style.shopSwiper}>
                     <SwiperSlide className={style.swiperslides}>
                         <img src="https://nav.porsche.com/00BC524/series-assets/1024/718@2x.jpg"/>
                     </SwiperSlide>
@@ -27,7 +32,7 @@ export const Shop = ()=>{
             </div>
             <div className={style.shoppay}>
                 <div className={style.shopbtngroup}>
-                    <button>Cash</button>
+                    <h2>Payment</h2>
                 </div>
                 <div className={style.shoppaymentmain}>
                     <div className={style.shoppayment}>
@@ -45,7 +50,7 @@ export const Shop = ()=>{
                     <h4>Due Today</h4>
                     <h4>250$</h4>
                 </div>
-                <button className={style.shopend}>Order with Card</button>
+                <button className={style.shopend} onClick={MovetoOrder}>Order with Card</button>
             </div>
         </div>
     </>

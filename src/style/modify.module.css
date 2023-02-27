@@ -46,3 +46,21 @@
     border-left: 1px solid lightgray;
     padding: 2%;
 }
+@media only screen and (max-width: 900px) {
+    .modifymain {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .modifyleft{
+        width:100%;
+    }
+    .modifyright{
+        text-align: center;
+        width: 100%;
+        padding: 0%;
+    }
+    .shopend{
+        width: 100%;
+    }
+  }

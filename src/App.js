@@ -11,6 +11,7 @@ import { Login } from './components/Accounts/Login';
 import { Signup } from './components/Accounts/Signup';
 import { Shop } from './components/Shop/Shop';
 import { CarPage } from './components/CarPage/CarPage';
+import { Order } from './components/Order/Order';
 
 const  App = ()=> {
   return (
@@ -26,6 +27,7 @@ const  App = ()=> {
           <Route path='/Login'element={<Login/>}/>
           <Route path='/Shop'element={<Shop/>}/>
           <Route path="/Car" element={<CarPage/>}/>
+          <Route path="/Order" element={<Order/>}/>
         </Routes>
         <Discover/>
         <Footer/>

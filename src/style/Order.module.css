@@ -1,0 +1,119 @@
+.Ordermain{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.leftOrder{
+    width: 65%;
+}
+.rightOrder{
+    width: 35%;
+}
+.rightOrder input{
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 2%;
+}
+.namesection{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.namefirst{
+    width: 45%;
+}
+.namefirst input{
+    width: 100%;
+    padding: 4%;
+}
+.namesecond{
+    width: 45%;
+}
+.namesecond input{
+    padding: 4%;
+    width: 100%;
+}
+.address{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.emailaddress{
+    width: 45%;
+}
+.emailaddress input{
+    padding: 4%;
+    width: 100%;
+}
+.homeaddress{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.homedd{
+    width: 100%;
+}
+.homedd input{
+    padding: 2%;
+    width: 100%;
+}
+.card{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.cardnum input{
+    width: 100%;
+}
+.carddata{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cvvnum{
+    width: 45%;
+}
+.cvvnum input{
+    width: 100%;
+    padding: 4%;
+}
+.expiredata{
+    width: 45%;
+}
+.expiredata input{
+    width: 100%;
+    padding: 4%;
+}
+.orderButton{
+    margin-top: 2%;
+    width: 100%;
+    padding: 2%;
+    font-size: large;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 25px;
+}
+.orderButton:hover{
+    background-color: white;
+    border: 1px solid lightgrey;
+}
+@media only screen and (max-width: 900px) {
+    .Ordermain{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .leftOrder{
+        width: 100%;
+    }
+    .rightOrder{
+        width: 100%;
+    }
+}
