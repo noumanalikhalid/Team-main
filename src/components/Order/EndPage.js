@@ -3,9 +3,9 @@ import { CheckCircle, XCircle } from 'react-bootstrap-icons'
 import style from '../../style/End.module.css'
 export const EndPage = ()=>{
     const flag = 0;
-    const [pro , proper] = useState("none")
+    const [pro , proper] = useState("block")
     const [secpro , secproper] = useState("none")
-    if(flag === 1){
+    if(flag == 1){
         proper("block")
     }
     else if(flag === 2 ){

@@ -13,6 +13,7 @@ import { Shop } from './components/Shop/Shop';
 import { CarPage } from './components/CarPage/CarPage';
 import { Order } from './components/Order/Order';
 import { EndPage } from './components/Order/EndPage';
+import { AdminLogin } from './components/Dashboard/Admin/AdminLogin';
 
 const  App = ()=> {
   return (
@@ -30,6 +31,7 @@ const  App = ()=> {
           <Route path="/Car" element={<CarPage/>}/>
           <Route path="/Order" element={<Order/>}/>
           <Route path="/Accepted" element={<EndPage/>}/>
+          <Route path="/Admin" element={<AdminLogin/>}/>
         </Routes>
         <Discover/>
         <Footer/>
