@@ -13,4 +13,55 @@
     position: absolute;
     right: 0;
     top: 0;
+    text-align: center;
+}
+.dashboardform{
+    width: 50%;
+    margin: auto;
+}
+.labels{
+    display: flex;
+    flex-direction: column;
+}
+.inserts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+}
+.inserts input{
+    padding: 2%;
+    width: 90%;
+}
+.labels{
+    width: 100%;
+}
+.insertbtn{
+    width: 100%;
+    padding: 2%;
+    font-size: large;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+}
+.tableinsert{
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    overflow-y: auto;
+}
+.tableinsert th{
+    border: 1px solid black;
+}
+.tableinsert td{
+    border: 1px solid black;
+}
+.insertbtn:hover{
+    background-color: gray;
+    color: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
