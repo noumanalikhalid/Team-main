@@ -1,4 +1,14 @@
 .mainModelCarso{
     width: 100%;
-    
+    background: url("https://i.ibb.co/ThmJc8s/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;   
+}
+.powercontainer{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    justify-content: space-between;
 }

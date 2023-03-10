@@ -9,6 +9,7 @@ import { Wheel } from "./Wheel";
 import { Interrior } from "./Interrior";
 import { Light } from "./Light";
 import { useNavigate } from "react-router-dom";
+import { Threesixty } from "./Threesixty";
 
 export const Modify = () => {
   const [lefted, lefteds] = useState("0%");
@@ -61,6 +62,7 @@ export const Modify = () => {
         <div className={style.modifymain}>
           <div className={style.modifyleft} >
             <ModelCarsouel />
+            <Threesixty/>
           </div>
           {/* Right Side */}
           <div className={style.modifyright}>

@@ -1,0 +1,16 @@
+.dashboardmain{
+    width: 100%;
+    position: relative;
+}
+.dashboardleft{
+    width: 18%;
+    position: static;
+    left: 0;
+}
+.dashboardRight{
+    width: 81%;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

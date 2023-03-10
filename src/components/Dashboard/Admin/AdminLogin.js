@@ -11,14 +11,15 @@ export const AdminLogin = ()=>{
         userEmails(e.target.value)
     }
     const PasswordCheck = (e)=>{
-        userPasswords(e.target.value)    }
+        userPasswords(e.target.value)    
+    }
     const dataget = (e)=>{
         e.preventDefault();
             axios.post(`http://localhost:3333/Admin/single`,{email:userEmail})
             .then((res)=>{
                 console.log(res.data)
                 if(res.data.password === userPassword){
-                    Navigate("/")
+                    Navigate("/Admin/Dashboard")
                     alert("Successfull")
                 }
             })

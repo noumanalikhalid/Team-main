@@ -10,10 +10,14 @@ import { Account } from './components/Accounts/Account';
 import { Login } from './components/Accounts/Login';
 import { Signup } from './components/Accounts/Signup';
 import { Shop } from './components/Shop/Shop';
-import { CarPage } from './components/CarPage/CarPage';
 import { Order } from './components/Order/Order';
 import { EndPage } from './components/Order/EndPage';
 import { AdminLogin } from './components/Dashboard/Admin/AdminLogin';
+import { AdminHome } from './components/Dashboard/View/AdminHome/AdminHome';
+import { Insert } from './components/Dashboard/View/AdminHome/Insert/Insert';
+import { Dashboard } from './components/Dashboard/View/AdminHome/Dashboard/Dashboard';
+import { Edit } from './components/Dashboard/View/AdminHome/Edit/Edit';
+import { Delete } from './components/Dashboard/View/AdminHome/Delete/Delete';
 
 const  App = ()=> {
   return (
@@ -28,10 +32,14 @@ const  App = ()=> {
           <Route path="/Signup" element={<Signup/>}/>
           <Route path="/Login"element={<Login/>}/>
           <Route path="/Shop"element={<Shop/>}/>
-          <Route path="/Car" element={<CarPage/>}/>
           <Route path="/Order" element={<Order/>}/>
           <Route path="/Accepted" element={<EndPage/>}/>
           <Route path="/Admin" element={<AdminLogin/>}/>
+          <Route path="/Admins" element={<AdminHome/>}/>
+          <Route path='/Insert' element={<Insert/>}/>
+          <Route path='/Dashboard' element={<Dashboard/>}/>
+          <Route path='/Edit' element={<Edit/>}/>
+          <Route path='/Delete' element={<Delete/>}/>
         </Routes>
         <Discover/>
         <Footer/>

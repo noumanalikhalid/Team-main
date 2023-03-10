@@ -1,0 +1,16 @@
+.Admin{
+    width: 100%;
+    position: relative;
+}
+.Adminleft{
+    width: 18%;
+    position: static;
+    left: 0;
+}
+.AdminRight{
+    width: 81%;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

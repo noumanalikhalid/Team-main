@@ -1,0 +1,45 @@
+.siderbar{
+    width: 100%;
+    border: 1px solid lightgray;
+    height: 100vh;
+}
+.siderbar h1{
+    text-align: center;
+}
+.icons{
+    font-size: larger;
+    margin-right: 2%;
+}
+.sidebardiv{
+    width: 80%;
+}
+.sidebaruls{
+    text-align: center;
+}
+.sidebaruls li{
+    list-style-type: none;
+    height: 50px;
+    line-height: 50px;
+}
+li:hover{
+    background-color: grey;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.siderbarprofile{
+    width: 95%;
+    padding: 3%;
+    margin: auto;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.siderbarprofile img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
