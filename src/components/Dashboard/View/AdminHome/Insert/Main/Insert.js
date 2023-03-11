@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { PencilSquare, Trash } from "react-bootstrap-icons";
 import style from "../../../../../../style/Dashboard.module.css";
 import { Sidebar } from "../../../Sidebar/Sidebar";
 
@@ -74,6 +75,8 @@ export const Insert = () => {
                 <th>2</th>
                 <th>3</th>
                 <th>3</th>
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -82,6 +85,16 @@ export const Insert = () => {
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
+                <td>
+                    <button className={style.btnEdit}>
+                       <PencilSquare/>
+                    </button> 
+                </td>
+                <td>
+                    <button className={style.btnDelete}>
+                        <Trash/>
+                    </button>
+                </td>
               </tr>
             </tbody>
           </table>
