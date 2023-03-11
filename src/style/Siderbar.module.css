@@ -21,7 +21,7 @@
     height: 50px;
     line-height: 50px;
 }
-li:hover{
+.sidebaruls li:hover{
     background-color: grey;
     color: white;
     border-radius: 25px;

@@ -19,7 +19,7 @@ export const AdminLogin = ()=>{
             .then((res)=>{
                 console.log(res.data)
                 if(res.data.password === userPassword){
-                    Navigate("/Admin/Dashboard")
+                    Navigate("/Admins")
                     alert("Successfull")
                 }
             })

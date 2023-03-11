@@ -14,7 +14,7 @@ export const Sidebar = () => {
       <div className={style.siderbar}>
         <h1>ADMIN</h1>
         <div className={style.siderbarprofile}>
-          <img src="https://picsum.photos/seed/picsum/200/300" />
+          <img src="https://picsum.photos/seed/picsum/200/300" alt="profile"/>
           <h3>Ali Hussain</h3>
         </div>
         <div className={style.sidebardiv}>

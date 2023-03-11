@@ -31,7 +31,7 @@
     text-align: left;
 }
 .inserts input{
-    padding: 2%;
+    padding: 3%;
     width: 90%;
 }
 .labels{
@@ -43,6 +43,22 @@
     font-size: large;
     border-radius: 25px;
     border: 1px solid lightgray;
+}
+.dashboardbtn{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.dashboardbtn button{
+    padding: 5%;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+}
+.dashboardbtn button:hover{
+    background-color: gray;
+    color: white;
 }
 .tableinsert{
     width: 100%;
