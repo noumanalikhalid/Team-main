@@ -1,6 +1,8 @@
 .dashboardmain{
     width: 100%;
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 .dashboardleft{
     width: 18%;
@@ -10,7 +12,7 @@
 .dashboardRight{
     width: 81%;
     margin: auto;
-    position: absolute;
+    position: static;
     right: 0;
     top: 0;
     text-align: center;

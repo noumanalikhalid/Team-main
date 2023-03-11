@@ -1,7 +1,7 @@
 .siderbar{
     width: 100%;
     border: 1px solid lightgray;
-    height: 100vh;
+    height: 100%;
 }
 .siderbar h1{
     text-align: center;
