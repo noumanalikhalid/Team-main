@@ -2,35 +2,72 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import style from '../../../style/Admin.module.css'
 import { useNavigate } from 'react-router-dom';
+import { X } from 'react-bootstrap-icons';
 
 export const AdminLogin = ()=>{
     const [userEmail , userEmails] = useState('');
     const [userPassword , userPasswords] = useState('');
-    const Navigate = useNavigate();
+    const [loginfailed , setLoginFailed] = useState('');
+    const navigate = useNavigate();
     const Emailcheck = (e)=>{
         userEmails(e.target.value)
     }
     const PasswordCheck = (e)=>{
         userPasswords(e.target.value)    
     }
+    const adminfailedclose = ()=>{
+        var y = document.getElementById("adminfailed");
+        y.style.display = "none"
+    }
+    const adminsuccessclose = ()=>{
+        var x = document.getElementById("adminsuccess");
+        x.style.display = "none"
+    }
     const dataget = (e)=>{
         e.preventDefault();
+            var x = document.getElementById("adminsuccess");
+            var y = document.getElementById("adminfailed");
             axios.post(`http://localhost:3333/Admin/single`,{email:userEmail})
             .then((res)=>{
-                console.log(res.data)
                 if(res.data.password === userPassword){
-                    Navigate("/Admins")
-                    alert("Successfull")
+                    x.style.display = "flex"
+                    y.style.display = "none"
+                    console.log(res.data)
+                    setTimeout(() => {
+                        navigate("/Admins")
+                    }, 500);
+                }
+                else{
+                    x.style.display = "none"
+                    y.style.display = "flex";
+                    setLoginFailed("Account / Password is Incorrect")
                 }
             })
             .catch((err)=>{
-                alert("Err")
+                if(err.message === "Request failed with status code 300"){
+                    console.log(err.message)
+                    x.style.display = "none"
+                    y.style.display = "flex";
+                    setLoginFailed("Account / Password is Incorrect")
+                }
+                else{
+                    x.style.display = "none"
+                    y.style.display = "flex";
+                }
             })
     }
     return(
         <>
             <div className={style.admincontainer}>
                 <h1>ADMIN</h1>
+                <div id="adminsuccess" className={style.adminloginsuccess}>
+                    <p>Login Sucessfull</p>
+                    <X onClick={adminsuccessclose}/>
+                </div>
+                <div id="adminfailed" className={style.adminloginfailed}>
+                    <p>Login Failed , {loginfailed}</p>
+                    <X onClick={adminfailedclose}/>
+                </div>
                 <form className={style.adminform}>
                     <div className={style.admindata_1}>
                         <label>Email</label>

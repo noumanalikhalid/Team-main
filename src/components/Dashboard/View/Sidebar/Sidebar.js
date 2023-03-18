@@ -1,9 +1,9 @@
 import React from "react";
 import {
+  Database,
   Pencil,
-  PencilSquare,
   Speedometer2,
-  Trash,
+
 } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import style from "../../../../style/Siderbar.module.css";
@@ -31,16 +31,10 @@ export const Sidebar = () => {
                 INSERT
               </li>
             </Link>
-            <Link to="/Edit">
+            <Link to="/Data">
               <li>
-                <PencilSquare className={style.icons} />
-                EDIT
-              </li>
-            </Link>
-            <Link to="/Delete">
-              <li>
-                <Trash className={style.icons} />
-                DELETE
+                <Database className={style.icons} />
+                Data
               </li>
             </Link>
           </ul>

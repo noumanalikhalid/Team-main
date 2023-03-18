@@ -17,8 +17,8 @@ import { AdminHome } from './components/Dashboard/View/AdminHome/AdminHome';
 import { Insert } from './components/Dashboard/View/AdminHome/Insert/Main/Insert';
 import { AdminModels } from './components/Dashboard/View/AdminHome/Insert/Models/AdminModels';
 import { Dashboard } from './components/Dashboard/View/AdminHome/Dashboard/Dashboard';
-import { Edit } from './components/Dashboard/View/AdminHome/Edit/Edit';
-import { Delete } from './components/Dashboard/View/AdminHome/Delete/Delete';
+import { Data } from './components/Dashboard/View/AdminHome/Data/Main/Main';
+import { MODELS } from './components/Dashboard/View/AdminHome/Data/Models/Models';
 
 const  App = ()=> {
   return (
@@ -40,8 +40,8 @@ const  App = ()=> {
           <Route path='/Insert' element={<Insert/>}/>
           <Route path='/InsertAdmin' element={<AdminModels/>}/>
           <Route path='/Dashboard' element={<Dashboard/>}/>
-          <Route path='/Edit' element={<Edit/>}/>
-          <Route path='/Delete' element={<Delete/>}/>
+          <Route path='/Data' element={<Data/>}/>
+          <Route path="/ModelData" element={<MODELS/>}/>
         </Routes>
         <Discover/>
         <Footer/>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { PencilSquare, Trash } from "react-bootstrap-icons";
 import style from "../../../../../../style/Dashboard.module.css";
 import { Sidebar } from "../../../Sidebar/Sidebar";
 import axios from "axios";
@@ -54,7 +53,6 @@ export const Insert = () => {
   };
 
   const MainDataSubmission = (e) => {
-    e.preventDefault();
 
     const Formdata = new FormData();
     Formdata.append("name", carnames);
@@ -98,7 +96,6 @@ export const Insert = () => {
           </div>
           <form
             enctype="multipart/form-data"
-            method="POST"
             className={style.dashboardform}
           >
             <div className={style.inserts}>
@@ -203,37 +200,6 @@ export const Insert = () => {
               className={style.insertbtn}
             />
           </form>
-          <h1>Insertation Data</h1>
-          <table className={style.tableinsert} cellSpacing="0">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>2</th>
-                <th>3</th>
-                <th>3</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>
-                  <button className={style.btnEdit}>
-                    <PencilSquare />
-                  </button>
-                </td>
-                <td>
-                  <button className={style.btnDelete}>
-                    <Trash />
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </>

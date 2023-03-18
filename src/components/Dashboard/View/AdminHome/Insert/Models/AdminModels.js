@@ -77,37 +77,6 @@ export const AdminModels = () => {
             </div>
             <input type="submit" value="Submit" className={style.insertbtn} />
           </form>
-          <h1>Insertation Data</h1>
-          <table className={style.tableinsert} cellSpacing="0">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>2</th>
-                <th>3</th>
-                <th>3</th>
-                <th>Edit</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>
-                    <button className={style.btnEdit}>
-                       <PencilSquare/>
-                    </button> 
-                </td>
-                <td>
-                    <button className={style.btnDelete}>
-                        <Trash/>
-                    </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </>

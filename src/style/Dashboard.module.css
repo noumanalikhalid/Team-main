@@ -63,10 +63,13 @@
     color: white;
 }
 .tableinsert{
-    width: 100%;
+    width: 90%;
+    margin: auto;
     text-align: center;
     height: 100%;
     overflow-y: auto;
+    margin-top: 2%;
+    border-collapse: collapse;
 }
 .tableinsert th{
     border: 1px solid black;
@@ -80,14 +83,14 @@
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 .btnEdit{
     background-color: rgb(21, 127, 62);
     border: none;
+    padding: 4%;
     color: white;
-    padding: 2%;
     font-size: larger;
     border-radius: 5px;
 }
@@ -95,7 +98,7 @@ input::-webkit-inner-spin-button {
     background-color: rgb(189, 18, 60);
     border: none;
     color: white;
-    padding: 2%;
+    padding: 4%;
     font-size: larger;
     border-radius: 5px;
 }
