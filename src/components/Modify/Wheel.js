@@ -21,10 +21,9 @@ export const Wheel = () => {
     <>
       <div className={style.mainwheel}>
         <div className={style.wheelsline}>
-        {data.map((datas) => (
-          <div className={style.wheelclass}>
+        {data.map((datas , index) => (
+          <div className={style.wheelclass} key={index}>
             <img src={datas.imgsrc} />
-            {/* <p className={style.wheelname}>{datas.Name}</p> */}
           </div>
         ))}
         </div>

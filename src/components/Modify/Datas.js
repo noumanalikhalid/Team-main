@@ -18,10 +18,11 @@ const Paint = () => {
   ];
   return (
     <>
+
       <div className={style.mainpaint}>
         <div className={style.paintsline}>
-          {data.map((datas) => (
-            <div className={style.paintclass}>
+          {data.map((datas,index) => (
+            <div className={style.paintclassess} key={index}>
               <img src={datas.color} />
             </div>
           ))}

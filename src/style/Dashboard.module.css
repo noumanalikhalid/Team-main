@@ -21,29 +21,63 @@
     width: 50%;
     margin: auto;
 }
+.dashboardformmodel{
+    width: 50%;
+    margin: auto;
+}
 .labels{
     display: flex;
     flex-direction: column;
 }
+.labelsmodel{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.labelsmodel input{
+    padding: 2%;
+    width: 90%;
+}
+.labels select{
+    width: 92%;
+}
 .inserts{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     text-align: left;
 }
+.insertmodel{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.insertmodels{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 .inserts input{
-    padding: 3%;
+    padding: 2%;
     width: 90%;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
 }
 .labels{
     width: 100%;
 }
 .insertbtn{
+    margin-top: 5%;
     width: 100%;
     padding: 2%;
     font-size: large;
-    border-radius: 25px;
+    border-radius: 999px;
     border: 1px solid lightgray;
 }
 .dashboardbtn{

@@ -15,15 +15,27 @@ export const Data = () => {
         navigate("/ModelData")
     }
 
-    const fetchData = async () => {
-        const { data } = await axios.get("http://localhost:3333/AdminMainData/all");
-        setCardata(data);
-      };
+    useEffect(() => {
+      axios
+        .get("http://localhost:3333/MainPage/Get")
+        .then((res) => {
+          setCardata(res.data);
+        })
+        .catch((err) => {
+          console.log("Error Reteriving Data");
+        });
+    });
     
-      // Trigger the fetchData after the initial render by using the useEffect hook
-      useEffect(() => {
-        fetchData();
-      }, []);
+    const deleteProduct = (name) => {
+      axios
+        .delete("http://localhost:3333/MainPage/deleteone", { data: { name } })
+        .then((response) => {
+          alert("Deleted Successfully");
+        })
+        .catch((error) => {
+          console.log("Error deleting the product", error);
+        });
+    };
   return (
     <>
       <div className={style.dashboardmain}>
@@ -41,9 +53,6 @@ export const Data = () => {
               <tr>
                 <th>#</th>
                 <th>Name</th>
-                <th>Price</th>
-                <th>Milage</th>
-                <th>Power</th>
                 <th>Edit</th>
                 <th>Delete</th>
               </tr>
@@ -53,16 +62,13 @@ export const Data = () => {
                 <tr key={index}>
                 <td>{index+1}</td>
                 <td>{post.name}</td>
-                <td>{post.price}</td>
-                <td>{post.milage}</td>
-                <td>{post.power}</td>
                 <td>
                   <button className={style.btnEdit}>
                     <PencilSquare />
                   </button>
                 </td>
                 <td>
-                  <button className={style.btnDelete}>
+                  <button className={style.btnDelete} onClick={() => deleteProduct(post.name)}>
                     <Trash />
                   </button>
                 </td>

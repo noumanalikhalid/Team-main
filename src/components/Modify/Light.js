@@ -20,8 +20,8 @@ export const Light = () => {
     <>
       <div className={style.mainlight}>
         <div className={style.lightline}>
-          {data.map((datas) => (
-            <div className={style.lightclass}>
+          {data.map((datas , index) => (
+            <div className={style.lightclass} key={index}>
               <img src={datas.image} />
               {/* <p className={style.lightname}>{datas.title}</p> */}
             </div>

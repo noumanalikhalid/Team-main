@@ -12,3 +12,7 @@
     margin: auto;
     justify-content: space-between;
 }
+.mainModelCarso img{
+    display: block;
+    margin: auto;
+}
