@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer'
 import { Built } from './components/PorscheCars/Built';
 import { Modify } from './components/Modify/Modify';
 import { Account } from './components/Accounts/Account';
-import { Login } from './components/Accounts/Login';
+import { AULogin } from './components/Accounts/AULogin';
 import { Signup } from './components/Accounts/Signup';
 import { Shop } from './components/Shop/Shop';
 import { Order } from './components/Order/Order';
@@ -31,7 +31,7 @@ const  App = ()=> {
           <Route path="/Modify" element={<Modify/>}/>
           <Route path="/Account"element={<Account/>}/>
           <Route path="/Signup" element={<Signup/>}/>
-          <Route path="/Login"element={<Login/>}/>
+          <Route path="/Login" element={<AULogin/>}/>
           <Route path="/Shop"element={<Shop/>}/>
           <Route path="/Order" element={<Order/>}/>
           <Route path="/Accepted" element={<EndPage/>}/>
