@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import ThreeSixty from 'react-360-view'
-import style from '../../style/Threesixty.module.css'
 import axios from 'axios';
 
 export const Threesixty = ()=>{
@@ -8,8 +7,16 @@ export const Threesixty = ()=>{
     let carname = localStorage.getItem("CarName");
     let carmodel = localStorage.getItem("CarModel");
     let carcolor = localStorage.getItem("Color");
+    let carWheel = localStorage.getItem("CarWheel");
+    let carLight = localStorage.getItem("Light");
     if (carcolor === "Default"){
         carcolor = "Silver";
+    }
+    if(carWheel === "Default"){
+        carWheel = "Steel";
+    }
+    if(carLight === "Default"){
+      carLight = "Normal";
     }
     useEffect(()=>{
         axios.get(
@@ -19,6 +26,8 @@ export const Threesixty = ()=>{
                 name: carname,
                 model: carmodel,
                 color: carcolor,
+                wheel: carWheel,
+                light: carLight
               },
             }
         )

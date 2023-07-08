@@ -19,9 +19,9 @@ export const AULogin = () => {
 
   const logintotheadminpannel = () => {
     axios
-      .post(`http://localhost:3333/Admin/single`, { email: Lemail })
+      .post(`http://localhost:3333/Admin/single`, { email: Lemail , password : userPassword})
       .then((res) => {
-        if (res.data.password === userPassword) {
+        if (res) {
           localStorage.setItem("User" , Lemail)
           navigate("/");
         }

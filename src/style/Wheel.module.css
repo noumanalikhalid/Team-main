@@ -10,6 +10,8 @@
 }
 .wheelclass{
     text-align: center;
+    border:none;
+    background: none;
 }
 .wheelclass img{
     width:50px;

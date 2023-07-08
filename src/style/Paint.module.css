@@ -9,6 +9,8 @@
     margin: auto;
 }
 .paintclassess{
+    border :none;
+    background: none;
     text-align: center;
 }
 .paintclassess img{

@@ -9,6 +9,8 @@
   margin: auto;
 }
 .lightclass{
+  border:none;
+  background: none;
   text-align: center;
 }
 .lightclass img{

@@ -7,7 +7,20 @@ import axios from "axios";
 
 export const ModelCarsouel = () => {
   const [cardata, setCardata] = useState([]);
-
+  let carname = localStorage.getItem("CarName");
+  let carmodel = localStorage.getItem("CarModel");
+  let carcolor = localStorage.getItem("Color");
+  let carWheel = localStorage.getItem("CarWheel");
+  let carLight = localStorage.getItem("Light");
+  if (carcolor === "Default"){
+      carcolor = "Silver";
+  }
+  if(carWheel === "Default"){
+      carWheel = "Steel";
+  }
+  if(carLight === "Default"){
+    carLight = "Normal";
+  }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -15,9 +28,11 @@ export const ModelCarsouel = () => {
           "http://localhost:3333/ModelPage/single",
           {
             params: {
-              name: "Taycan",
-              model: "Turbo S",
-              color: "Silver",
+              name: carname,
+              model: carmodel,
+              color: carcolor,
+              wheel: carWheel,
+              light: carLight
             },
           }
         );
@@ -45,7 +60,7 @@ export const ModelCarsouel = () => {
                 <img
                   key={imageIndex}
                   src={`http://localhost:3333/uploads/${image}`}
-                  height="500px"
+                  height="450px"
                   alt={cardatas.model}
                 />
                 <div className={style.powercontainer}>

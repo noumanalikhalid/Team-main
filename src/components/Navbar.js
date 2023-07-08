@@ -142,9 +142,9 @@ const Navbar = () => {
               My Porsche
              </Link>
              </li>
-            <li>
+            {/* <li>
               <ThreeDotsVertical/>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={style.btnContain} onClick={showMenuFunc}>
@@ -194,7 +194,7 @@ const Navbar = () => {
             <li><img src="https://i.ibb.co/RvQCXbk/shopping-bag.png" width="20px" height="20px" />Shop</li>
             <li><img src="https://i.ibb.co/cc8LV03/location.png" width="20px" height="20px" />Dealers</li>
             <li><img src="https://i.ibb.co/K0vQd1G/person.png" width="20px" height="20px" />My Porsche</li>
-            <li><img src="https://i.ibb.co/mDYgtqb/dots.png" width="20px" height="20px" className={style.dots} /></li>
+            {/* <li><img src="https://i.ibb.co/mDYgtqb/dots.png" width="20px" height="20px" className={style.dots} /></li> */}
           </ul>
         </div>
         <div className={style.btnContain} onClick={showMenuFunc}>

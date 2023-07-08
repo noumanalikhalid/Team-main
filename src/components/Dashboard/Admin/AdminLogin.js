@@ -6,7 +6,7 @@ import { X } from 'react-bootstrap-icons';
 
 export const AdminLogin = ()=>{
     const [userEmail , userEmails] = useState('');
-    const [userPassword , userPasswords] = useState('');
+    const [Password , userPasswords] = useState('');
     const [loginfailed , setLoginFailed] = useState('');
     const navigate = useNavigate();
     const Emailcheck = (e)=>{
@@ -27,9 +27,9 @@ export const AdminLogin = ()=>{
         e.preventDefault();
             var x = document.getElementById("adminsuccess");
             var y = document.getElementById("adminfailed");
-            axios.post(`http://localhost:3333/Admin/single`,{email:userEmail})
+            axios.post(`http://localhost:3333/Admin/single`,{email:userEmail , password:Password})
             .then((res)=>{
-                if(res.data.password === userPassword){
+                if(res.status === 200){
                     x.style.display = "flex"
                     y.style.display = "none"
                     console.log(res.data)
