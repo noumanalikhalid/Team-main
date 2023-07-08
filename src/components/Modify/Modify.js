@@ -1,7 +1,6 @@
-import { ChevronLeft, ChevronRight, Save } from "react-bootstrap-icons";
+import { ChevronLeft, Save } from "react-bootstrap-icons";
 import style from "../../style/modify.module.css";
 
-import Details from "./Detail";
 import Datas from "./Datas";
 import { ModelCarsouel } from "./ModelCarsouel";
 // import { useState } from "react";
@@ -11,10 +10,17 @@ import { useNavigate } from "react-router-dom";
 import { Threesixty } from "./Threesixty";
 
 export const Modify = () => {
+
   const Navigation = useNavigate();
+
   const MovetoShop = () => {
     Navigation("/Shop");
   };
+  
+  const movetobuit = () =>{
+    Navigation("/Built")
+  }
+  
   return (
     <>
       <div className={style.container_modify}>
@@ -23,7 +29,7 @@ export const Modify = () => {
           <p>Porsche</p>
         </div>
         <div className={style.buttonsdiv}>
-          <button className={style.back}>
+          <button className={style.back} onClick={movetobuit}>
             <ChevronLeft />
             Back
           </button>

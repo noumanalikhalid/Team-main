@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 
 
-export const PBuilt = (props)=>{
+export const PBuilt = ()=>{
     const [data ,setData ] = useState([])
     const [matches, setMatches] = useState(false);
 
@@ -27,12 +27,14 @@ export const PBuilt = (props)=>{
     const cardatasubtwo=(carmodel)=>{
         localStorage.setItem("CarModel" , carmodel);
         localStorage.setItem("Color" , "Default")
+        localStorage.setItem("CarWheel" , "Default")
+        localStorage.setItem("Light" , "Default")
     }
     return<>
         {data.map((datas , index)=>(
             <Link to="/Modify" key={index} className={style.carbuild} onClick={cardatasubtwo(datas.model)}>
                 <div className={style.carpicture}>
-                <img src={`http://localhost:3333/uploads/${datas.carimage}`} alt='my_picture'/>
+                <img src={`http://localhost:3333/uploads/${datas.carimage}`} alt={datas.model}/>
                     <div className={style.carname}>
                         <h4>{datas.model}</h4>
                     </div>

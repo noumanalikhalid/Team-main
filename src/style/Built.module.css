@@ -35,6 +35,7 @@
 }
 
 .leftselect{
+    height: 100vh;
     width: 25%;
     text-align: center;
     border-right: 1px solid grey;
