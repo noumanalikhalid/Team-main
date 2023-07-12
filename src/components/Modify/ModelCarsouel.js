@@ -21,7 +21,9 @@ export const ModelCarsouel = () => {
   if(carLight === "Default"){
     carLight = "Normal";
   }
+  
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
         const response = await axios.get(

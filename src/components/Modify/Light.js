@@ -1,11 +1,30 @@
 import React from "react";
 import style from '../../style/Light.module.css'
+import { useState } from "react";
 
 export const Light = () => {
-  const wheels=(data)=>{
-    localStorage.setItem("Light" , data);
-    window.location.reload()
-  }
+  const [selectedColorIndex, setSelectedColorIndex] = useState(null);
+  const [selectedButton, setSelectedButton] = useState(null);
+
+  const lights = (index, event) => {
+    localStorage.setItem("Light" , data[index].title);
+
+    setSelectedColorIndex(index);
+
+    const clickedButton = event.currentTarget;
+
+    if (selectedButton) {
+      selectedButton.style.background = "";
+      selectedButton.style.borderRadius = "";
+      selectedButton.style.padding = "";
+    }
+
+    clickedButton.style.background = "yellow";
+    clickedButton.style.borderRadius = "50%";
+    clickedButton.style.padding = "3%";
+
+    setSelectedButton(clickedButton);
+  };
   const data = [
     {
       title :"Normal",
@@ -28,7 +47,11 @@ export const Light = () => {
       <div className={style.mainlight}>
         <div className={style.lightline}>
           {data.map((datas , index) => (
-            <button className={style.lightclass} onClick={()=>wheels(datas.title)} key={index}>
+            <button 
+              className={`${style.lightclass} ${
+                selectedColorIndex === index ? style.selected : ""
+              }`}
+              onClick={(event)=>lights(index,event)} key={index}>
               <img src={datas.image} alt={datas.title}/>
             </button>
           ))}

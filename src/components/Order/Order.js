@@ -1,13 +1,64 @@
 import React from "react";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useNavigate } from "react-router-dom";
 import style from "../../style/Order.module.css";
 import { OrderCarousel } from "./OrderCarousel";
+import axios from "axios";
 
 export const Order = () => {
-    const Navigate = useNavigate();
-    const Movetoend = ()=>{
-        Navigate("/Accepted")
-    }
+  const navigate = useNavigate();
+  const userID = localStorage.getItem("User_ID");
+  const userName = localStorage.getItem("UserName");
+  const carname = localStorage.getItem("CarName");
+  const carmodel = localStorage.getItem("CarModel");
+  const amount = localStorage.getItem("Total Price");
+  const carcolor = localStorage.getItem("Color");
+  const carwheel = localStorage.getItem("CarWheel");
+  const carlight = localStorage.getItem("Light");
+
+  const userData = {
+    userid: userID,
+    name: userName,
+    carname: carname,
+    carmodel: carmodel,
+    carprice: amount,
+    carcolor: carcolor,
+    carwheel: carwheel,
+    carlight: carlight,
+  };
+
+  const currency = "USD";
+  const initialOptions = {
+    clientId: "YOUR_PAYPAL_CLIENT_ID", // Replace with your PayPal client ID
+    currency: "USD",
+    intent: "capture",
+  };
+  const handleCreateOrder = (data, actions) => {
+    return actions.order
+      .create({
+        purchase_units: [
+          {
+            amount: {
+              currency_code: currency,
+              value: amount,
+            },
+          },
+        ],
+      })
+      .then((orderId) => {
+        axios
+          .post("http://localhost:3333/UserOrder/AddtoCart", userData)
+          .then((res) => {
+            console.log(res.data);
+            navigate("/Accepted")
+          })
+          .catch((err) => {
+            console.log("Error in Payment", err);
+          });
+        return orderId;
+      });
+  };
+
   return (
     <>
       <div className={style.Ordermain}>
@@ -15,54 +66,18 @@ export const Order = () => {
           <OrderCarousel />
         </div>
         <form className={style.rightOrder}>
-          <div>
-            <div className={style.namesection}>
-              <div className={style.namefirst}>
-                <p>First Name </p>
-                <input type="text" placeholder="First Name" />
-              </div>
-              <div className={style.namesecond}>
-                <p>Last Name</p>
-                <input type="text" placeholder="Last Name" />
-              </div>
-            </div>
-            <div className={style.address}>
-              <div className={style.emailaddress}>
-                <p>Email : </p>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div className={style.emailaddress}>
-                <p>Phone : </p>
-                <input type="number" placeholder="Phone" />
-              </div>
-            </div>
-            <div className={style.homeaddress}>
-                <div className={style.homedd}>
-                <p>Email : </p>
-                <input type="email" placeholder="Email" />
-                </div>
-            </div>
-            <div className={style.card}>
-                <h2>CARD</h2>
-                <div className={style.cardnum}>
-                    <p>Card number</p>
-                    <input type="text" placeholder="Card Number"/>
-                </div>
-                <div className={style.carddata}>
-                    <div className={style.cvvnum}>
-                    <p>CVV number</p>
-                    <input type="text" placeholder="Card Number"/>
-                    </div>
-                    <div className={style.expiredata}>
-                    <p>Expire Date</p>
-                    <input type="Date" placeholder="Card Number"/>
-                    </div>
-                </div>
-            </div>
-            <button className={style.orderButton} onClick={Movetoend}>ORDER</button>
+          <div style={{ marginTop: "5%" }}>
+            <PayPalScriptProvider options={initialOptions}>
+              <PayPalButtons
+                createOrder={handleCreateOrder}
+                forceReRender={[amount, currency, style]}
+              />
+            </PayPalScriptProvider>
           </div>
         </form>
       </div>
     </>
   );
 };
+
+export default Order;

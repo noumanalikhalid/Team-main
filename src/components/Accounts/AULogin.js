@@ -23,6 +23,14 @@ export const AULogin = () => {
       .then((res) => {
         if (res) {
           localStorage.setItem("User" , Lemail)
+          localStorage.setItem("UserName" , res.data.name)
+          localStorage.setItem("User_ID" , res.data._id)
+          if(res.data.admin === "True"){
+            localStorage.setItem("Admin" , res.data.admin)
+          }
+          else{
+            localStorage.setItem("Admin" , "False")
+          }
           navigate("/");
         }
       })

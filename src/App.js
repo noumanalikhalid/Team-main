@@ -16,7 +16,6 @@ import { AdminLogin } from './components/Dashboard/Admin/AdminLogin';
 import { AdminHome } from './components/Dashboard/View/AdminHome/AdminHome';
 import { Insert } from './components/Dashboard/View/AdminHome/Insert/Main/Insert';
 import { AdminModels } from './components/Dashboard/View/AdminHome/Insert/Models/AdminModels';
-import { Dashboard } from './components/Dashboard/View/AdminHome/Dashboard/Dashboard';
 import { Data } from './components/Dashboard/View/AdminHome/Data/Main/Main';
 import { MODELS } from './components/Dashboard/View/AdminHome/Data/Models/Models';
 
@@ -36,10 +35,9 @@ const  App = ()=> {
           <Route path="/Order" element={<Order/>}/>
           <Route path="/Accepted" element={<EndPage/>}/>
           <Route path="/Admin" element={<AdminLogin/>}/>
-          <Route path="/Admins" element={<AdminHome/>}/>
+          <Route path="/Dashboard" element={<AdminHome/>}/>
           <Route path='/Insert' element={<Insert/>}/>
           <Route path='/InsertAdmin' element={<AdminModels/>}/>
-          <Route path='/Dashboard' element={<Dashboard/>}/>
           <Route path='/Data' element={<Data/>}/>
           <Route path="/ModelData" element={<MODELS/>}/>
         </Routes>

@@ -49,6 +49,18 @@
     padding: 1%;
     margin-bottom: 2%;
 }
+.notadmin{
+    width: 35%;
+    margin: auto;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 7px;
+    background: lightpink;
+    color: red;
+    padding: 1%;
+    margin-bottom: 2%;    
+}
 .adminloginfailed{
     width: 35%;
     margin: auto;

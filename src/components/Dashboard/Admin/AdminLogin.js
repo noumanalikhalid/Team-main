@@ -23,19 +23,29 @@ export const AdminLogin = ()=>{
         var x = document.getElementById("adminsuccess");
         x.style.display = "none"
     }
+    const notadminclose = ()=>{
+        var z = document.getElementById("notadmin")
+        z.style.display = "none"
+    }
     const dataget = (e)=>{
         e.preventDefault();
             var x = document.getElementById("adminsuccess");
             var y = document.getElementById("adminfailed");
+            var z = document.getElementById("notadmin");
             axios.post(`http://localhost:3333/Admin/single`,{email:userEmail , password:Password})
             .then((res)=>{
                 if(res.status === 200){
-                    x.style.display = "flex"
-                    y.style.display = "none"
-                    console.log(res.data)
-                    setTimeout(() => {
-                        navigate("/Admins")
-                    }, 500);
+                    
+                    localStorage.setItem("Admin" , res.data.admin)
+                    if(res.data.admin === "False"){
+                        z.style.display = "flex"
+                    }else{
+                        x.style.display = "flex"
+                        y.style.display = "none"
+                        setTimeout(() => {
+                            navigate("/Dashboard")
+                        }, 500);
+                    }
                 }
                 else{
                     x.style.display = "none"
@@ -63,6 +73,10 @@ export const AdminLogin = ()=>{
                 <div id="adminsuccess" className={style.adminloginsuccess}>
                     <p>Login Sucessfull</p>
                     <X onClick={adminsuccessclose}/>
+                </div>
+                <div id="notadmin" className={style.notadmin}>
+                    <p>You're Not admin</p>
+                    <X onClick={notadminclose}/>
                 </div>
                 <div id="adminfailed" className={style.adminloginfailed}>
                     <p>Login Failed , {loginfailed}</p>

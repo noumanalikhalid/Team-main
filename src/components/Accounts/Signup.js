@@ -25,7 +25,8 @@ export const Signup = () => {
     const data = {
       name : fname + lname,
       email,
-      password
+      password,
+      admin : "False"
     }
     axios.post("http://localhost:3333/Admin/register" , data)
     .then((res)=>{
