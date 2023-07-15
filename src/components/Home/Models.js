@@ -8,6 +8,7 @@ const Models = () => {
 
   const storethecarname = (carname)=>{
     localStorage.setItem("CarName" , carname);
+    localStorage.setItem("CarColor" , "Silver")
   }
 
   useEffect(() => {

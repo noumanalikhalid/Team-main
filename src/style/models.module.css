@@ -28,10 +28,6 @@
     background-position: center;
     background-size: cover;
 }
-.modelBox:hover{
-    background-color: black;
-    opacity: 50%;
-}
 .modelBox:hover h2{
     color:white;
     visibility : visible;

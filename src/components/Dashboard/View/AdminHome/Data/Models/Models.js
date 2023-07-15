@@ -8,6 +8,16 @@ import axios from "axios";
 export const MODELS = ()=>{
     const navigate = useNavigate();
     const [cardata , setCardata] = useState([]);
+    const deletemodel = (name ,  model , color)=>{
+      axios.delete("http://localhost:3333/ModelPage/Delete" , {params : {name , model , color}})
+      .then((res)=>{
+        console.log(res.data)
+        window.location.reload("")
+      })
+      .catch((err)=>{
+        console.log("Error : " , err)
+      })
+    }
     const datamainpage =()=>{
         navigate("/Data")
       }
@@ -16,8 +26,9 @@ export const MODELS = ()=>{
     }
 
     const fetchData = async () => {
-        const { data } = await axios.get("http://localhost:3333/AdminMainData/all");
+        const { data } = await axios.get("http://localhost:3333/ModelPage/GetAll");
         setCardata(data);
+        console.log(data)
       };
 
       useEffect(() => {
@@ -51,17 +62,17 @@ export const MODELS = ()=>{
             {cardata.map((post , index) => (
                 <tr key={index}>
                 <td>{index+1}</td>
-                <td>{post.name}</td>
+                <td>{post.name +" "+post.model + " " + post.color}</td>
                 <td>{post.price}</td>
                 <td>{post.milage}</td>
-                <td>{post.power}</td>
+                <td>{post.maxpower}</td>
                 <td>
                   <button className={style.btnEdit}>
                     <PencilSquare />
                   </button>
                 </td>
                 <td>
-                  <button className={style.btnDelete}>
+                  <button className={style.btnDelete} onClick={() => deletemodel(post.name , post.model , post.color)}>
                     <Trash />
                   </button>
                 </td>

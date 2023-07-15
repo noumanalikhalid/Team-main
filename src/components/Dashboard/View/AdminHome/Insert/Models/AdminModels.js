@@ -5,6 +5,14 @@ import { Sidebar } from "../../../Sidebar/Sidebar";
 import axios from "axios";
 
 export const AdminModels = () => {
+  const navigate = useNavigate();
+  const userLogin = localStorage.getItem("Admin");
+
+  useEffect(() => {
+      if (userLogin === "True" || userLogin === "True") {
+          navigate("/Dashboard");
+      }
+  }, [navigate, userLogin]);
   const [data, setdata] = useState([]);
   const navigation = useNavigate();
   const mainpageinsert = () => {

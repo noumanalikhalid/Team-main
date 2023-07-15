@@ -23,6 +23,7 @@ const Paint = () => {
     clickedButton.style.padding = "3%";
 
     setSelectedButton(clickedButton);
+    window.location.reload()
   };
 
   const data = [

@@ -9,7 +9,7 @@ import { useState } from "react";
 import axios from "axios";
 
 export const Built = () => {
-  let carName = localStorage.getItem("CarName");
+  let carName = localStorage.getItem("CarName");  
   const navigation = useNavigate();
 
   const movetohome = () => {

@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "../../../../../../style/Dashboard.module.css";
 import { Sidebar } from "../../../Sidebar/Sidebar";
 import axios from "axios";
 
 export const Insert = () => {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
+  const userLogin = localStorage.getItem("Admin");
+
+  useEffect(() => {
+      if (userLogin === "True" || userLogin === "True") {
+          navigate("/Dashboard");
+      }
+  }, [navigate, userLogin]);
   const mainpageinsert = () => {
-    navigation("/Insert");
+    navigate("/Insert");
   };
   const modelpageinsert = () => {
-    navigation("/InsertAdmin");
+    navigate("/InsertAdmin");
   };
   const [carnames, setCarNames] = useState("");
   const [carmainimages, setCarMainImage] = useState("");

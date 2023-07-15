@@ -6,24 +6,24 @@ import axios from 'axios';
 
 export const PBuilt = ()=>{
     const [data ,setData ] = useState([])
-    const [matches, setMatches] = useState(false);
 
-    const datafetch = (name)=>{
+    const datafetch = (name , carcolor)=>{
         console.log(name)
         axios
-        .get(`http://localhost:3333/ModelPage/Get/` , {params:{name}})
+        .get(`http://localhost:3333/ModelPage/Get/` , {params:{name , carcolor}})
         .then((res) => {
             setData(res.data);
-            setMatches(true)
             })
           .catch((err) => {
             console.log("Failed to get the data");
           });
     }
     const name = localStorage.getItem("CarName");
+    const carColor = localStorage.getItem("CarColor")
+
     useEffect(()=>{
-        datafetch(name);
-    },[matches])
+        datafetch(name , carColor);
+    },[name , carColor])
     const cardatasubtwo=(carmodel)=>{
         localStorage.setItem("CarModel" , carmodel);
         localStorage.setItem("Color" , "Default")

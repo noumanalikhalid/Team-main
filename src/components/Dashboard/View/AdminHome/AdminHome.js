@@ -9,8 +9,11 @@ export const AdminHome = ()=>{
     const userLogin = localStorage.getItem("Admin");
 
     useEffect(() => {
-        if (userLogin === "True" || userLogin === "True") {
+        if (userLogin === "true" || userLogin === "True") {
             navigate("/Dashboard");
+        }
+        else{
+            navigate("/")
         }
     }, [navigate, userLogin]);
 
