@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import style from "../../style/Shop.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-// import required modules
 import { Navigation } from "swiper";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -50,7 +48,7 @@ export const Shop = () => {
     };
 
     fetchData();
-  }, []);
+  }, [carLight , carWheel , carcolor , carname , carmodel]);
   const Destination = 1000;
   const Order = 120;
 
@@ -71,8 +69,12 @@ export const Shop = () => {
               className={style.shopSwiper}
             >
               {data.productimage.map((image, imageIndex) => (
-                <SwiperSlide key={imageIndex} className={style.swiperslides}>
+                <SwiperSlide key={imageIndex} 
+                  style={{display:'flex' , justifyContent:'center' , alignItems:'center' , width:'100%'}}  
+                  >
                   <img
+                    style={{width:'100%'}}
+                    // style
                     src={`http://localhost:3333/uploads/${image}`}
                     alt={data.model}
                   />

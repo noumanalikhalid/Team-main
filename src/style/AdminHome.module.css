@@ -9,8 +9,45 @@
 }
 .AdminRight{
     width: 81%;
-    margin: auto;
+    margin-top: 2%;
     position: absolute;
     right: 0;
     top: 0;
+}
+.AdminRightBox{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+}
+.AdminRightBoxOrder{
+    width: 25%;
+    font-size: xx-large;
+    padding: 3%;
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.AdminRightBoxUser{
+    width: 25%;
+    font-size: xx-large;
+    padding: 3%;
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+.AdminRightBoxAdmin{
+    width: 25%;
+    font-size: xx-large;
+    padding: 3%;
+    color: white;
+    background-color: blue;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
 }

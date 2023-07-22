@@ -15,10 +15,12 @@ export const Order = () => {
   const carcolor = localStorage.getItem("Color");
   const carwheel = localStorage.getItem("CarWheel");
   const carlight = localStorage.getItem("Light");
+  const userEmail = localStorage.getItem("UserEmail")
 
   const userData = {
     userid: userID,
     name: userName,
+    email : userEmail,
     carname: carname,
     carmodel: carmodel,
     carprice: amount,

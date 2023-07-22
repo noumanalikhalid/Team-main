@@ -22,7 +22,7 @@ export const AULogin = () => {
       .post(`http://localhost:3333/Admin/single`, { email: Lemail , password : userPassword})
       .then((res) => {
         if (res) {
-          localStorage.setItem("User" , Lemail)
+          localStorage.setItem("UserEmail" , Lemail)
           localStorage.setItem("UserName" , res.data.name)
           localStorage.setItem("User_ID" , res.data._id)
           if(res.data.admin === "True"){

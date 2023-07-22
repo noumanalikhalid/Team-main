@@ -6,36 +6,47 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const Data = () => {
-    const navigate = useNavigate();
-    const [cardata , setCardata] = useState([]);
-    const datamainpage =()=>{
-        navigate("/Data")
-      }
-      const datamodelpage = ()=>{
-        navigate("/ModelData")
-    }
+  const navigate = useNavigate();
+  const userLogin = localStorage.getItem("Admin");
 
-    useEffect(() => {
-      axios
-        .get("http://localhost:3333/MainPage/Get")
-        .then((res) => {
-          setCardata(res.data);
-        })
-        .catch((err) => {
-          console.log("Error Reteriving Data");
-        });
-    });
-    
-    const deleteProduct = (name) => {
-      axios
-        .delete("http://localhost:3333/MainPage/deleteone", { data: { name } })
-        .then((response) => {
-          alert("Deleted Successfully");
-        })
-        .catch((error) => {
-          console.log("Error deleting the product", error);
-        });
-    };
+  useEffect(() => {
+    if (userLogin === "True" || userLogin === "true") {
+      navigate("/Admin/Data");
+    }
+    else{
+      navigate("/")
+    }
+  }, [navigate, userLogin]);
+
+  const [cardata, setCardata] = useState([]);
+  const datamainpage = () => {
+    navigate("/Admin/Data");
+  };
+  const datamodelpage = () => {
+    navigate("/Admin/ModelData");
+  };
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3333/MainPage/Get")
+      .then((res) => {
+        setCardata(res.data);
+      })
+      .catch((err) => {
+        console.log("Error Reteriving Data");
+      });
+  });
+
+  const deleteProduct = (name) => {
+    axios
+      .delete("http://localhost:3333/MainPage/deleteone", { data: { name } })
+      .then((response) => {
+        alert("Deleted Successfully");
+      })
+      .catch((error) => {
+        console.log("Error deleting the product", error);
+      });
+  };
   return (
     <>
       <div className={style.dashboardmain}>
@@ -58,22 +69,25 @@ export const Data = () => {
               </tr>
             </thead>
             <tbody>
-            {cardata.map((post , index) => (
+              {cardata.map((post, index) => (
                 <tr key={index}>
-                <td>{index+1}</td>
-                <td>{post.name}</td>
-                <td>
-                  <button className={style.btnEdit}>
-                    <PencilSquare />
-                  </button>
-                </td>
-                <td>
-                  <button className={style.btnDelete} onClick={() => deleteProduct(post.name)}>
-                    <Trash />
-                  </button>
-                </td>
-              </tr>
-             ))}
+                  <td>{index + 1}</td>
+                  <td>{post.name}</td>
+                  <td>
+                    <button className={style.btnEdit}>
+                      <PencilSquare />
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      className={style.btnDelete}
+                      onClick={() => deleteProduct(post.name)}
+                    >
+                      <Trash />
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

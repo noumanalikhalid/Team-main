@@ -35,7 +35,7 @@ export const AdminLogin = ()=>{
             axios.post(`http://localhost:3333/Admin/single`,{email:userEmail , password:Password})
             .then((res)=>{
                 if(res.status === 200){
-                    
+                    localStorage.setItem("UserEmail" , userEmail)
                     localStorage.setItem("Admin" , res.data.admin)
                     if(res.data.admin === "False"){
                         z.style.display = "flex"

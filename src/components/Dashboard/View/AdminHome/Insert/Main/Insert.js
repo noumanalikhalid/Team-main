@@ -9,15 +9,18 @@ export const Insert = () => {
   const userLogin = localStorage.getItem("Admin");
 
   useEffect(() => {
-      if (userLogin === "True" || userLogin === "True") {
-          navigate("/Dashboard");
+      if (userLogin === "True" || userLogin === "true") {
+          navigate("/Admin/Insert");
+      }
+      else{
+        navigate("/")
       }
   }, [navigate, userLogin]);
   const mainpageinsert = () => {
-    navigate("/Insert");
+    navigate("/Admin/Insert");
   };
   const modelpageinsert = () => {
-    navigate("/InsertAdmin");
+    navigate("/Admin/InsertAdmin");
   };
   const [carnames, setCarNames] = useState("");
   const [carmainimages, setCarMainImage] = useState("");

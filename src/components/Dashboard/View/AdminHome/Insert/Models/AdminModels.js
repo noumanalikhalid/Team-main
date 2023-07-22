@@ -6,20 +6,22 @@ import axios from "axios";
 
 export const AdminModels = () => {
   const navigate = useNavigate();
+  const [data, setdata] = useState([]);
   const userLogin = localStorage.getItem("Admin");
 
   useEffect(() => {
-      if (userLogin === "True" || userLogin === "True") {
-          navigate("/Dashboard");
+      if (userLogin === "True" || userLogin === "true") {
+          navigate("/Admin/InsertAdmin");
+      }
+      else{
+        navigate("/")
       }
   }, [navigate, userLogin]);
-  const [data, setdata] = useState([]);
-  const navigation = useNavigate();
   const mainpageinsert = () => {
-    navigation("/Insert");
+    navigate("/Admin/Insert");
   };
   const modelpageinsert = () => {
-    navigation("/InsertAdmin");
+    navigate("/Admin/InsertAdmin");
   };
 
   const [carname , setCarName] = useState();

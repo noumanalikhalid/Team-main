@@ -18,6 +18,8 @@ import { Insert } from './components/Dashboard/View/AdminHome/Insert/Main/Insert
 import { AdminModels } from './components/Dashboard/View/AdminHome/Insert/Models/AdminModels';
 import { Data } from './components/Dashboard/View/AdminHome/Data/Main/Main';
 import { MODELS } from './components/Dashboard/View/AdminHome/Data/Models/Models';
+import { UserOrder } from './components/Dashboard/View/AdminHome/User/UserOrder/UserOrder';
+import { Users } from './components/Dashboard/View/AdminHome/User/Users/Users';
 
 const  App = ()=> {
   return (
@@ -36,10 +38,12 @@ const  App = ()=> {
           <Route path="/Accepted" element={<EndPage/>}/>
           <Route path="/Admin" element={<AdminLogin/>}/>
           <Route path="/Dashboard" element={<AdminHome/>}/>
-          <Route path='/Insert' element={<Insert/>}/>
-          <Route path='/InsertAdmin' element={<AdminModels/>}/>
-          <Route path='/Data' element={<Data/>}/>
-          <Route path="/ModelData" element={<MODELS/>}/>
+          <Route path='/Admin/Insert' element={<Insert/>}/>
+          <Route path='/Admin/InsertAdmin' element={<AdminModels/>}/>
+          <Route path='/Admin/Data' element={<Data/>}/>
+          <Route path="/Admin/ModelData" element={<MODELS/>}/>
+          <Route path="/Admin/Users" element={<Users/>}/>
+          <Route path="/Admin/UserOrder" element={<UserOrder/>}/>
         </Routes>
         <Discover/>
         <Footer/>

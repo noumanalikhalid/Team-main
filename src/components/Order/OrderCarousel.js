@@ -49,7 +49,7 @@ export const OrderCarousel = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [carLight , carWheel , carcolor , carmodel , carname]);
   return (
     <>
       <div>

@@ -5,35 +5,49 @@ import { Sidebar } from "../../../Sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export const MODELS = ()=>{
-    const navigate = useNavigate();
-    const [cardata , setCardata] = useState([]);
-    const deletemodel = (name ,  model , color)=>{
-      axios.delete("http://localhost:3333/ModelPage/Delete" , {params : {name , model , color}})
-      .then((res)=>{
-        console.log(res.data)
-        window.location.reload("")
-      })
-      .catch((err)=>{
-        console.log("Error : " , err)
-      })
-    }
-    const datamainpage =()=>{
-        navigate("/Data")
-      }
-      const datamodelpage = ()=>{
-        navigate("/ModelData")
-    }
+export const MODELS = () => {
+  const navigate = useNavigate();
+  const userLogin = localStorage.getItem("Admin");
 
-    const fetchData = async () => {
-        const { data } = await axios.get("http://localhost:3333/ModelPage/GetAll");
-        setCardata(data);
-        console.log(data)
-      };
+  useEffect(() => {
+    if (userLogin === "True" || userLogin === "true") {
+      navigate("/Admin/ModelData");
+    }
+    else{
+      navigate("/")
+    }
+  }, [navigate, userLogin]);
 
-      useEffect(() => {
-        fetchData();
-      }, []);
+  const [cardata, setCardata] = useState([]);
+  const deletemodel = (name, model, color) => {
+    axios
+      .delete("http://localhost:3333/ModelPage/Delete", {
+        params: { name, model, color },
+      })
+      .then((res) => {
+        console.log(res.data);
+        window.location.reload("");
+      })
+      .catch((err) => {
+        console.log("Error : ", err);
+      });
+  };
+  const datamainpage = () => {
+    navigate("/Admin/Data");
+  };
+  const datamodelpage = () => {
+    navigate("/Admin/ModelData");
+  };
+
+  const fetchData = async () => {
+    const { data } = await axios.get("http://localhost:3333/ModelPage/GetAll");
+    setCardata(data);
+    console.log(data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
       <div className={style.dashboardmain}>
@@ -59,29 +73,34 @@ export const MODELS = ()=>{
               </tr>
             </thead>
             <tbody>
-            {cardata.map((post , index) => (
+              {cardata.map((post, index) => (
                 <tr key={index}>
-                <td>{index+1}</td>
-                <td>{post.name +" "+post.model + " " + post.color}</td>
-                <td>{post.price}</td>
-                <td>{post.milage}</td>
-                <td>{post.maxpower}</td>
-                <td>
-                  <button className={style.btnEdit}>
-                    <PencilSquare />
-                  </button>
-                </td>
-                <td>
-                  <button className={style.btnDelete} onClick={() => deletemodel(post.name , post.model , post.color)}>
-                    <Trash />
-                  </button>
-                </td>
-              </tr>
-             ))}
+                  <td>{index + 1}</td>
+                  <td>{post.name + " " + post.model + " " + post.color}</td>
+                  <td>{post.price}</td>
+                  <td>{post.milage}</td>
+                  <td>{post.maxpower}</td>
+                  <td>
+                    <button className={style.btnEdit}>
+                      <PencilSquare />
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      className={style.btnDelete}
+                      onClick={() =>
+                        deletemodel(post.name, post.model, post.color)
+                      }
+                    >
+                      <Trash />
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
       </div>
     </>
   );
-}
+};

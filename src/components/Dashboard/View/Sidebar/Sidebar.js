@@ -2,6 +2,7 @@ import React from "react";
 import {
   Database,
   Pencil,
+  Person,
   Speedometer2,
 
 } from "react-bootstrap-icons";
@@ -25,16 +26,22 @@ export const Sidebar = () => {
                 DASHBOARD
               </li>
             </Link>
-            <Link to="/Insert">
+            <Link to="/Admin/Insert">
               <li>
                 <Pencil className={style.icons} />
                 INSERT
               </li>
             </Link>
-            <Link to="/Data">
+            <Link to="/Admin/Data">
               <li>
                 <Database className={style.icons} />
                 Data
+              </li>
+            </Link>
+            <Link to="/Admin/Users">
+              <li>
+                <Person className={style.icons}/>
+                Users
               </li>
             </Link>
           </ul>
