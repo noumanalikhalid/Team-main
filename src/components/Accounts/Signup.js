@@ -30,7 +30,6 @@ export const Signup = () => {
     }
     axios.post("http://localhost:3333/Admin/register" , data)
     .then((res)=>{
-      console.log("Working" , res.data)
       navigate("/Login")
     })
     .catch((err)=>{

@@ -3,6 +3,7 @@ import style from '../../../../style/AdminHome.module.css'
 import { Sidebar } from '../Sidebar/Sidebar'
 import { useNavigate } from 'react-router-dom';
 import { Box, Person, PersonCheck } from 'react-bootstrap-icons';
+import Charted from './Dashboard/Charted'
 import axios from 'axios';
 
 
@@ -35,16 +36,17 @@ export const AdminHome = ()=>{
         })
     },[])
 
-    useEffect(()=>{
-        axios.get("http://localhost:3333/Admin/readAdmin" , {data:{admin : "True"}})
-        .then((res)=>{
-            setAdmin(res.data.length+1)
-            setHasLoaded(true);
-        })
-        .catch((err)=>{
-            console.log("Error : ",err)
-        })
-    },[hasLoaded])
+    useEffect(() => {
+        axios.get("http://localhost:3333/Admin/readAdmin", { params: { admin: 'True' } })
+            .then((res) => {
+                setAdmin(res.data.length);
+                setHasLoaded(true);
+            })
+            .catch((err) => {
+                console.log("Error: ", err);
+            });
+    }, [hasLoaded]);
+    
 
     useEffect(() => {
         if (userLogin === "true" || userLogin === "True") {
@@ -81,6 +83,9 @@ export const AdminHome = ()=>{
                             </div>
                             <PersonCheck/>
                         </div>
+                    </div>
+                    <div>
+                        <Charted/>
                     </div>
                 </div>
             </div>
