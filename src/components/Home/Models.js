@@ -36,7 +36,6 @@ const Models = () => {
             >
             <img className={style.modelImage} src={`http://localhost:3333/uploads/${datas.mainimage}`} alt={datas.name}/>
               <h2>{datas.name}</h2>
-              <button className={style.btnBuild}>Build Your Own</button>
               <button className={style.btnModel}>All Models</button>
             </Link>
           ))}

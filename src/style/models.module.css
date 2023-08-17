@@ -61,10 +61,13 @@
     color: white;
     border: 1px solid white;
     margin-top: 170px;
+    margin-right: 2%;
+    margin-left: 2%;
     font-size: 1em;
     cursor:pointer;
     transition-duration: 0.2s;
     padding: 10px 20px;
+    width: 95%;
 }
 .btnModel:hover {
     color: red;
